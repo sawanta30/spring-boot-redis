@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "01772a4b-581d-45e8-876c-26aebac49393",
+		"name": "spring-boot-redis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"65d3e61b-a756-48aa-be5e-711db2cd1a73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"ABC\",\r\n    \"lastname\":\"XYZ\",\r\n    \"dateOfBirth\":\"1994-10-30\",\r\n    \"dateOfJoining\":\"2017-01-18\",\r\n    \"designation\":\"Dy Manager\",\r\n    \"grade\":\"A5\",\r\n    \"domain\":\"IT\",\r\n    \"salary\":15000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"Akshay\",\r\n    \"lastname\":\"Sawant\",\r\n    \"dateOfBirth\":\"1994-10-30\",\r\n    \"dateOfJoining\":\"2017-01-18\",\r\n    \"designation\":\"Dy Manager\",\r\n    \"grade\":\"A5\",\r\n    \"domain\":\"IT\",\r\n    \"salary\":15000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"65d3e61b-a756-48aa-be5e-711db2cd1a73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"65d3e61b-a756-48aa-be5e-711db2cd1a73"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
