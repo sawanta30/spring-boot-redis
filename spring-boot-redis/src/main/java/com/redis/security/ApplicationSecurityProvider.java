@@ -16,16 +16,15 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class ApplicationSecurityProvider extends WebSecurityConfigurerAdapter {
 
-	private final PasswordEncoder passwordEncoder;
-	
 	@Autowired
-	public ApplicationSecurityProvider(PasswordEncoder passwordEncoder) {
-		this.passwordEncoder = passwordEncoder;
-	}
+	private PasswordEncoder passwordEncoder;
+
+
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
+		.csrf().disable()
 		.authorizeRequests()
 		.anyRequest()
 		.authenticated()
@@ -38,14 +37,17 @@ public class ApplicationSecurityProvider extends WebSecurityConfigurerAdapter {
 	protected UserDetailsService userDetailsService() {
 		
 		UserDetails sawanta30 = User.builder()
-							.accountExpired(false)
-							.accountLocked(false)
-							.credentialsExpired(false)
-							.password(passwordEncoder.encode("Akshay@30"))
 							.username("sawanta30")
+							.password(passwordEncoder.encode("Akshay@30"))
 							.roles(ApplicationUserRoles.ADMIN.name())//ROLE_ADMIN
 							.build();
-		return new InMemoryUserDetailsManager(sawanta30);
+		UserDetails sawantas007 = User.builder()
+				.username("sawantas007")
+				.password(passwordEncoder.encode("Akshay@30"))
+				.roles(ApplicationUserRoles.ADMINTRAINEE.name())//ROLE_ADMINTRAINEE
+				.build();
+		
+		return new InMemoryUserDetailsManager(sawanta30,sawantas007);
 		
 	}
 
