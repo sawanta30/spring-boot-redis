@@ -14,13 +14,13 @@ public class RedisConfigurationProvider {
 	@Bean
 	public LettuceConnectionFactory lettuceConnectionFactory() {
 		RedisClusterConfiguration clusterConfiguration = new  RedisClusterConfiguration();
-		clusterConfiguration.clusterNode("127.0.0.1", 6379);
+		clusterConfiguration.clusterNode("10.32.142.13", 5000);
 		clusterConfiguration.setPassword("reliance123".toCharArray());
 		RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
 		redisStandaloneConfiguration.setHostName("127.0.0.1");
 		redisStandaloneConfiguration.setPort(6379);
 		LettuceClientConfiguration lettuceClientConfig = LettuceClientConfiguration.defaultConfiguration();
-		return new LettuceConnectionFactory(redisStandaloneConfiguration,lettuceClientConfig);
+		return new LettuceConnectionFactory(clusterConfiguration,lettuceClientConfig);
 	}
 	
 	@Bean

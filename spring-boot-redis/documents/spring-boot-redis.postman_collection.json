@@ -6,12 +6,27 @@
 	},
 	"item": [
 		{
-			"name": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+			"name": "localhost:8080/api/v1/employees",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "sawanta30",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Akshay@30",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+					"raw": "localhost:8080/api/v1/employees",
 					"host": [
 						"localhost"
 					],
@@ -19,8 +34,7 @@
 					"path": [
 						"api",
 						"v1",
-						"employees",
-						"65d3e61b-a756-48aa-be5e-711db2cd1a73"
+						"employees"
 					]
 				}
 			},
@@ -86,7 +100,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/api/v1/employees/65d3e61b-a756-48aa-be5e-711db2cd1a73",
+			"name": "localhost:8080/api/v1/employees/86c7998b-270b-4ed4-a0dd-33d0e71afda7",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -101,6 +115,142 @@
 						"v1",
 						"employees",
 						"65d3e61b-a756-48aa-be5e-711db2cd1a73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/admin/users",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "sawanta30",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Akshay@30",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorities\":[\"employee:read\",\"admin:read\"],\r\n    \"username\":\"akshaysawant3010\",\r\n    \"password\":\"Akshay@30\",\r\n    \"accountNotExpired\":true,\r\n    \"accountNonLocked\":true,\r\n    \"credentialsNonExpired\":true,\r\n    \"enabled\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/admin/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/admin/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "sawanta30",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Akshay@30",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorities\":[\"employee:read\",\"employee:write\",\"admin:read\",\"admin:write\"],\r\n    \"username\":\"sawanta30\",\r\n    \"password\":\"Akshay@30\",\r\n    \"accountNotExpired\":true,\r\n    \"accountNonLocked\":true,\r\n    \"credentialsNonExpired\":true,\r\n    \"enabled\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/admin/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/admin/users/9469dafc-1452-48ae-944b-3398d8948fee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "sawanta30",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Akshay@30",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorities\":[\"employee:read\",\"employee:write\",\"admin:read\",\"admin:write\"],\r\n    \"username\":\"sawanta30\",\r\n    \"password\":\"Akshay@30\",\r\n    \"accountNotExpired\":true,\r\n    \"accountNonLocked\":true,\r\n    \"credentialsNonExpired\":true,\r\n    \"enabled\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/admin/users/9469dafc-1452-48ae-944b-3398d8948fee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"users",
+						"9469dafc-1452-48ae-944b-3398d8948fee"
 					]
 				}
 			},

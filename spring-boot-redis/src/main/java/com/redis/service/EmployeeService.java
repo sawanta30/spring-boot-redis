@@ -19,8 +19,8 @@ public class EmployeeService {
 		return employeeRepository.save(employee);
 	}
 	
-	public Optional<Employee> getEmployeeById(String id) {
-		return employeeRepository.findById(id);
+	public Employee getEmployeeById(String id) {
+		return employeeRepository.findById(id).orElseThrow(()->new IllegalStateException("Employee not found : "+id));
 	}
 	
 	public Employee UpdateEmployee(String id, Employee employee) {
